@@ -1,22 +1,21 @@
-export default function Cabecalho() {
-  return (
-    <>
-      <header>
-        <h1>
-          Vite + React / Coded By - RM98626
-        </h1>
-        <ul>
-          <li>
-            <a href="#">Item - 1</a>
-          </li>
-          <li>
-            <a href="#">Item - 2</a>
-          </li>
-          <li>
-            <a href="#">Item - 3</a>
-          </li>
-        </ul>
-      </header>
-    </>
-  );
+import { Link } from "react-router-dom"
+
+export default function Cabecalho(){
+
+  return(
+      <>
+          <header>
+              <h1>Vite+React</h1>
+              <nav>
+                  <ul>
+                      <li><Link to="/">Home</Link></li>
+                      <li><Link to="/produtos">Produtos</Link></li>
+                      <li><Link to="/editar/produtos/1">Produto - 1</Link></li>
+                      <li><Link to="/editar/produtos/2">Produto - 2</Link></li>
+                      <li><Link to="/editar/produtos/3">Produto - 3</Link></li>
+                  </ul>
+              </nav>
+          </header>
+      </>
+  )
 }
