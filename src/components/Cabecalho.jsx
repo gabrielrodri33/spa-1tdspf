@@ -3,7 +3,7 @@ export default function Cabecalho() {
     <>
       <header>
         <h1>
-          Vite + React / Coded By - <RM98626></RM98626>
+          Vite + React / Coded By - RM98626
         </h1>
         <ul>
           <li>
