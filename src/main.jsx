@@ -9,7 +9,7 @@ import Home from './routes/Home.jsx';
 import Produtos from './routes/Produtos.jsx';
 import Erro from './routes/Erro.jsx';
 import EditarProdutos from './routes/EditarProdutos.jsx';
-import ExcluirProdutos from './routes/ExcluirProdutos.jsx'; 
+import ExcluirProdutos from './routes/ExcluirProdutos.jsx'
 
 const router = createBrowserRouter(
   [
@@ -18,8 +18,8 @@ const router = createBrowserRouter(
     children:[
       {path : "/" , element : <Home/>},
       {path : "/produtos" , element : <Produtos/>},
+      {path: "/excluir/produtos/:id", element: <ExcluirProdutos/>},
       {path : "/editar/produtos/:id" , element : <EditarProdutos/>},
-      {path : "/excluir/produtos/:id" , element : <ExcluirProdutos/>},
     ]}
   ]
 );
