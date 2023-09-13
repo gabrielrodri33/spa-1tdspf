@@ -1,33 +1,33 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { ListaProdutos } from "../components/ListaProdutos";
 import {AiFillEdit as EditObj} from "react-icons/ai"
 import {RiDeleteBin2Fill as DelObj} from "react-icons/ri";
+import estilos from "./Produtos.module.css";
 
 export default function Produtos() {
   return (
     <>
       <h1>Produtos Informáticos - FIAPO</h1>
 
-      <table>
+      <table className={estilos.tblEstilo}>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>NOME</th>
-            <th>DESCRIÇÃO</th>
-            <th>PREÇO</th>
-            <th>EDITAR/EXCLUIR</th>
+            <th className={estilos.tblHeader}>ID</th>
+            <th className={estilos.tblHeader}>NOME</th>
+            <th className={estilos.tblHeader}>DESCRIÇÃO</th>
+            <th className={estilos.tblHeader}>PREÇO</th>
+            <th className={estilos.tblHeader}>EDITAR/EXCLUIR</th>
           </tr>
         </thead>
         
-        <tbody>
+        <tbody> 
           {ListaProdutos.map((produto, indice) => (
-            <tr key={indice}>
-              <td>{produto.id}</td>
-              <td>{produto.nome}</td>
-              <td>{produto.desc}</td>
-              <td>{produto.preco}</td>
-              <td> <Link to={`/editar/produtos/${produto.id}`}><EditObj/></Link> | <Link to={`/excluir/produtos/${produto.id}`}><DelObj/></Link></td>
+            <tr key={indice} className={estilos.tblLine}>
+              <td className={estilos.tblData}>{produto.id}</td>
+              <td className={estilos.tblData}>{produto.nome}</td>
+              <td className={estilos.tblData}>{produto.desc}</td>
+              <td className={estilos.tblData}>{produto.preco}</td>
+              <td className={estilos.tblData}> <Link to={`/editar/produtos/${produto.id}`}><EditObj/></Link> | <Link to={`/excluir/produtos/${produto.id}`}><DelObj/></Link></td>
             </tr>
           ))}
         </tbody>
