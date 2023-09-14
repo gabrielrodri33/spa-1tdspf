@@ -32,12 +32,13 @@ export default function EditarProdutos() {
     e.preventDefault();
 
     let indice;
+    // ListaProdutos.forEach((item, index)=>{
+    //   if(item.id == produto.id){
+    //     indice = index;
+    //   }
+    // });
 
-    ListaProdutos.forEach((item, index)=>{
-      if(item.id == produto.id){
-        indice = index;
-      }
-    });
+    indice = ListaProdutos.findIndex9item(item.id == ListaProdutos.id);
 
     ListaProdutos.splice(indice,1,produto);
     alert("Seu produto foi alterado com Sucesso!");
