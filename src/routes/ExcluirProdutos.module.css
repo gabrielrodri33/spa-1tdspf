@@ -1,0 +1,26 @@
+
+.tit{
+    text-align: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & figure{
+        border: 3px solid #eb0c7c;
+
+        & img{
+            display: block;
+        }
+
+        & figcaption{
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+    }
+
+}
