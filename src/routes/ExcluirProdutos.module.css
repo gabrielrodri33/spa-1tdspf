@@ -8,6 +8,15 @@
     flex-direction: column;
     align-items: center;
 
+    & .alert{
+        text-align: center;
+        background-color: #c55555;
+        color: #6d2121;
+        font-weight: bold;
+        border: 2px solid #830a0a;
+        border-radius: 3px;
+    }
+
     & figure{
         border: 3px solid #eb0c7c;
 
@@ -22,5 +31,33 @@
         }
 
     }
+       .btn{
+            
+            & button{
+                width: 100%;
+                height: 40px;
+                margin: 2%;
+                border: none;
+                color:#fff;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+            
+            & button:first-child{
+                background-color: #ff0000;
+                &:hover{
+                    background-color: #830a0a;
+                }
+            }
+
+            & button:last-child{
+                background-color: #0d5c0d;
+                &:hover{
+                    background-color: #081d08;
+                }
+            }
+
+        }
 
 }
