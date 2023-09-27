@@ -17,9 +17,9 @@ export default function ExcluirProdutos() {
     indice = ListaProdutos.findIndex(item => item.id == produto.id);
 
     //Alterando o produto na lista com o método splice()
-    ListaProdutos.splice(indice, 1);
+    ListaProdutos.splice(indice,1);
 
-    alert("Produto excluído com sucesso!")
+    alert("Produto excluído com SUCESSO!");
 
     //Redirecionando o usuáio para a página de produtos!
     navigate('/produtos');
