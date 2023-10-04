@@ -12,7 +12,7 @@ export default function Produtos() {
 
   useEffect(() => {
     //Criando o bloco de reequisição dos dados utilizando o fetch com promises:
-fetch("http://localhost:5173/produtos", {
+fetch("http://localhost:5000/produtos", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ fetch("http://localhost:5173/produtos", {
 
       { open ? <ModalInserir open={open} setOpen={setOpen}/> : "" }
 
-      <button onClick={()=> setOpen(true)}>OPEN-MODAL</button>
+      <Link onClick={()=> setOpen(true)}>Cadastrar Produtos</Link>  
 
       <table className={estilos.tblEstilo}>
         <thead>
